@@ -1,5 +1,5 @@
 :root {
-  /* 🎨 COLOR PALETTE (Soft modern blue theme) */
+
   --bg: #f2f6ff;
   --card: #ffffff;
   --accent: #2b6cb0;
@@ -9,12 +9,12 @@
   --text-dark: #1a202c;
   --shadow: rgba(0, 0, 0, 0.08);
 
-  /* 💎 UI Variables */
+
   --radius: 16px;
   --transition: all 0.3s ease;
 }
 
-/* GLOBAL RESET */
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -29,14 +29,14 @@ body {
   line-height: 1.6;
 }
 
-/* CONTAINER */
+
 .container {
   max-width: 920px;
   margin: 32px auto;
   padding: 20px;
 }
 
-/* CARD */
+
 .card {
   background: var(--card);
   border-radius: var(--radius);
@@ -50,7 +50,7 @@ body {
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
 }
 
-/* CENTERED PAGE LAYOUT */
+
 .page-center {
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ body {
   text-align: center;
 }
 
-/* TYPOGRAPHY */
+
 .big {
   font-size: 36px;
   margin: 8px 0;
@@ -81,7 +81,7 @@ body {
   font-size: 16px;
 }
 
-/* BUTTONS */
+
 .btn {
   padding: 12px 22px;
   border-radius: 12px;
@@ -113,7 +113,7 @@ body {
   color: var(--accent);
 }
 
-/* LINKS */
+
 .link {
   color: var(--muted);
   text-decoration: none;
@@ -124,7 +124,7 @@ body {
   color: var(--accent);
 }
 
-/* TOPBAR */
+
 .topbar {
   display: flex;
   align-items: center;
@@ -137,12 +137,12 @@ body {
   color: var(--muted);
 }
 
-/* QUIZ LAYOUT */
+
 .quiz-card {
   padding: 20px;
 }
 
-/* PROGRESS BAR */
+
 .progress {
   height: 10px;
   background: rgba(26, 32, 44, 0.08);
@@ -159,7 +159,7 @@ body {
   transition: width 0.5s ease-in-out;
 }
 
-/* QUESTION AREA */
+
 .question-wrap {
   min-height: 160px;
   display: flex;
@@ -173,7 +173,7 @@ body {
   margin-bottom: 14px;
 }
 
-/* LIKERT SCALE */
+
 .likert {
   display: flex;
   flex-wrap: wrap;
@@ -210,7 +210,7 @@ input[type="radio"]:checked + label {
   font-weight: 700;
 }
 
-/* NAVIGATION */
+
 .nav-row {
   display: flex;
   align-items: center;
@@ -227,7 +227,7 @@ input[type="radio"]:checked + label {
   color: var(--muted);
 }
 
-/* RESULT PAGE STYLES */
+
 .mbti-image-area {
   margin-top: 10px;
   text-align: center;
@@ -259,7 +259,7 @@ input[type="radio"]:checked + label {
   background: rgba(99, 179, 237, 0.12);
 }
 
-/* RESPONSIVENESS */
+
 @media (max-width: 700px) {
   .container {
     padding: 14px;
@@ -292,4 +292,5 @@ input[type="radio"]:checked + label {
     height: 8px;
   }
 }
+
 
