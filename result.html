@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MBTI Test — Result</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+<div class="logo">MBTI Result</div>
+<a href="index.html" class="link ghost">Home</a>
+</header>
+
+
+<main class="container">
+<div class="card" id="resultCard">
+<h2>Result</h2>
+<div id="resultSummary" class="result-summary small"></div>
+
+
+<div id="mbtiImageArea" class="mbti-image-area">
+
+</div>
+
+
+<h3 style="margin-top:14px">Cognitive Functions</h3>
+<div id="functionsGrid" class="functions-grid"></div>
+
+
+<h3 style="margin-top:14px">Type description & Enneagram</h3>
+<div id="typeDesc" class="small"></div>
+
+
+<div style="margin-top:12px">
+<button id="restartBtn" class="btn ghost">Restart Test</button>
+<button id="exportBtn" class="btn primary">Export result (text)</button>
+</div>
+</div>
+</main>
+
+
+<script src="script.js"></script>
+<script>
+
+window.addEventListener('DOMContentLoaded',()=>{
+QuizUI.showResults();
+
+
+document.getElementById('restartBtn').addEventListener('click',()=>{
+if(confirm('Restart test? This will remove saved answers.')){
+localStorage.removeItem('mbti_answers');
+window.location.href='index.html';
+}
+});
+
+
+document.getElementById('exportBtn').addEventListener('click',()=>{
+const txt = QuizUI.getExportText();
+const blob = new Blob([txt],{type:'text/plain'});
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a'); a.href = url; a.download = 'mbti_result.txt'; a.click(); URL.revokeObjectURL(url);
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MBTI Personality Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-center">
+<main class="card start-card">
+<h1 class="big">MBTI Personality Test</h1>
+<p class="lead">Discover your MBTI style and cognitive function breakdown</p>
+<div class="start-actions">
+<button id="startBtn" class="btn primary">Start Test</button>
+<a href="result.html" class="link ghost"></a>
+</div>
+<div id="loading" class="loading" style="display:none">Loading<span class="dots">...</span></div>
+</main>
+<script>
+document.getElementById('startBtn').addEventListener('click',()=>{
+
+document.getElementById('loading').style.display='block';
+setTimeout(()=>{
+
+localStorage.removeItem('mbti_answers');
+window.location.href = 'quiz.html';
+},700);
+});
+</script>
+</body>
+</html>

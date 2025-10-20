@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MBTI Test — Questions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+<div class="logo"></div>
+<div id="progressText" class="small">Question 1 / 120</div>
+</header>
+
+
+<main class="container">
+<div class="card quiz-card">
+<div class="progress"><i id="progBar"></i></div>
+
+
+<div id="questionWrap" class="question-wrap">
+
+</div>
+
+
+<div class="nav-row">
+<button id="prevBtn" class="btn ghost" disabled>← Previous</button>
+<div class="nav-right">
+<button id="calcBtn" class="btn primary" style="display:none">Calculate Result</button>
+<button id="nextBtn" class="btn">Next →</button>
+</div>
+</div>
+
+
+<div class="small muted" </div>
+</div>
+</main>
+
+
+<script src="script.js"></script>
+<script>
+QuizUI.init({containerId:'questionWrap',progTextId:'progressText',progBarId:'progBar',perPage:1});
+</script>
+</body>
+</html>
